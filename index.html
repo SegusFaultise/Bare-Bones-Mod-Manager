@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
+    <title>Bare Bones Mod Manager</title>
+</head>
+
+<body>
+    <div class="container">
+       
+        <aside id="sidebar">
+            <h2>Saved Mod Files</h3>
+            <ul id="file-list"></ul>
+        </aside>
+
+        <main>
+            <div id="drop_zone">drag and drop your .zip mod files here</div>
+
+            <button id="unzipModsButton">Enable mods</button>
+            <!-- <button id="removeAllModsButton">Remove All Mods from Lethal Company</button> -->
+            <button id="removeSpecificModsButton">Remove mods</button>
+            <h3 id="modMessage"></h3>
+
+            <div id="gamesContainer">
+                <h2>Steam Games</h2>
+                <ul id="gamesList" class="games-list"></ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="./Functions/file.js"></script>
+    <script src="./Functions/mod_manager.js"></script>
+</body>
+
+</html>

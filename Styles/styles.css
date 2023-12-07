@@ -1,0 +1,181 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+:root {
+    --hover-color: #B931FC;
+    --default-color: #9400FF;
+    --list-bg-color: #3f3f3f85;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+header h1 {
+    margin: 0;
+}
+
+aside {
+    display: block;
+    text-align: center;
+    width: 250px;
+    background-color:  #131313;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+#file-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mod-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Align items to the start of the container */
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.mod-file-item:hover {
+    background-color: var(--list-bg-color);
+}
+
+.file-name {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin: 10px;
+    flex-grow: 1; /* Allows the name to take up available space */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Prevent text from overflowing */
+    flex-grow: 1
+    margin-right: 10px; /* Adjust as necessary for spacing */
+}
+
+.delete-mod-button {
+    margin-left: auto; /* Push the button to the end of the flex container */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    font-size: 30px;
+    color: red;
+}
+
+.delete-mod-button img {
+    width: 0%; /* Make image use full size of the button */
+    height: 0%; /* Make image use full size of the button */
+    transition: transform 0.3s ease;
+}
+
+.delete-mod-button:hover {
+    background-color: transparent;
+}
+
+.delete-mod-button img:hover {
+    background-color: red;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#drop_zone {
+    font-size: 25px;
+    border: 2px dashed;
+    border-color: var(--default-color);
+    border-radius: 10px;
+    padding: 150px;
+    text-align: center;
+    color: var(--default-color);
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+#drop_zone:hover {
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+    transition: 0.3s;
+}
+
+button {
+    font-size: large;
+    background-color: var(--default-color);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+.games-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.game-item {
+    background-color: var(--list-bg-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.game-item:hover {
+    background-color: var(--hover-color);
+}
+
+.game-title {
+    font-size: 1.2em;
+    color: whitesmoke;
+    margin: 0;
+}
+
+/* Styling the scrollbar for the whole body or a specific element */
+body::-webkit-scrollbar, .scrollable-content::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track, .scrollable-content::-webkit-scrollbar-track {
+    background-color: #f2f2f20c; /* Light grey track */
+    border-radius: 6px; /* Rounded corners for the track */
+}
+
+body::-webkit-scrollbar-thumb, .scrollable-content::-webkit-scrollbar-thumb {
+    background-color: #8888883b; /* Darker grey for the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+    border: 0px solid #f2f2f217; /* Creates a padding-like effect inside the track */
+}
+
+body::-webkit-scrollbar-thumb:hover, .scrollable-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover for better interaction feedback */
+}
+
+h3 {
+
+    display: inline;
+}
